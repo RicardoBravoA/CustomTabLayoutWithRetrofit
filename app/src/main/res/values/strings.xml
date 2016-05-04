@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TabLayout</string>
+    <string name="search">Buscar</string>
+    <string name="favorites">Favoritos</string>
+    <string name="my_applications">Mis Postulaciones</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="my_account">Mi cuenta</string>
+</resources>
