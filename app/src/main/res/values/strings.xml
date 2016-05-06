@@ -5,4 +5,7 @@
     <string name="my_applications">Mis Postulaciones</string>
     <string name="notifications">Notificaciones</string>
     <string name="my_account">Mi cuenta</string>
+    <string name="success">success</string>
+    <string name="error_data">Error al obtener data</string>
+    <string name="connect_internet">Conéctese a Internet</string>
 </resources>

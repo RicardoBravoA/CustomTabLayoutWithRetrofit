@@ -2,9 +2,12 @@ package pe.com.orbis.tablayout.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -18,7 +21,7 @@ import pe.com.orbis.tablayout.model.response.PlaceResponse;
 public class PlaceAdapter extends RecyclerView.Adapter<PlaceAdapter.ViewHolder> {
 
     private Context mContext;
-    private List<PlaceResponse.DataBean placeList;
+    private List<PlaceResponse.DataBean> placeList;
     static LayoutInflater inflater = null;
 
     public PlaceAdapter(Context mContext, List<PlaceResponse.DataBean> placeList) {

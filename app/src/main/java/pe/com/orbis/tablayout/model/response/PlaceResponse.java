@@ -8,6 +8,7 @@ import java.util.List;
 
 public class PlaceResponse {
 
+
     /**
      * status : success
      * code : 200
@@ -15,7 +16,7 @@ public class PlaceResponse {
 
     private MetaBean _meta;
     /**
-     * placeid : 1
+     * place_id : 1
      * description : Place 1
      */
 
@@ -59,15 +60,15 @@ public class PlaceResponse {
     }
 
     public static class DataBean {
-        private int placeid;
+        private int place_id;
         private String description;
 
-        public int getPlaceid() {
-            return placeid;
+        public int getPlace_id() {
+            return place_id;
         }
 
-        public void setPlaceid(int placeid) {
-            this.placeid = placeid;
+        public void setPlace_id(int place_id) {
+            this.place_id = place_id;
         }
 
         public String getDescription() {
