@@ -22,7 +22,7 @@
                 android:singleLine="true"
                 android:imeOptions="actionGo"
                 android:layout_height="wrap_content" />
-
+rica
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout

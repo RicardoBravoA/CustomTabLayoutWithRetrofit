@@ -22,6 +22,7 @@ import java.util.List;
 import pe.com.orbis.tablayout.fragment.FiveFragment;
 import pe.com.orbis.tablayout.fragment.FourFragment;
 import pe.com.orbis.tablayout.fragment.OneFragment;
+import pe.com.orbis.tablayout.fragment.SixFragment;
 import pe.com.orbis.tablayout.fragment.ThreeFragment;
 import pe.com.orbis.tablayout.fragment.TwoFragment;
 import pe.com.orbis.tablayout.model.entity.DataEntity;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity{
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), titles[0]);
+        adapter.addFragment(new SixFragment(), titles[0]);
         adapter.addFragment(new TwoFragment(), titles[1]);
         adapter.addFragment(new ThreeFragment(), titles[2]);
         adapter.addFragment(new FourFragment(), titles[3]);
