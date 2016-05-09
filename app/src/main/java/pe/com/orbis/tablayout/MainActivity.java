@@ -19,9 +19,9 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.ArrayList;
 import java.util.List;
 
+import pe.com.orbis.tablayout.fragment.BaseFragment;
 import pe.com.orbis.tablayout.fragment.FiveFragment;
 import pe.com.orbis.tablayout.fragment.FourFragment;
-import pe.com.orbis.tablayout.fragment.OneFragment;
 import pe.com.orbis.tablayout.fragment.SixFragment;
 import pe.com.orbis.tablayout.fragment.ThreeFragment;
 import pe.com.orbis.tablayout.fragment.TwoFragment;
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
     private ViewPager viewPager;
     private String data;
     private String[] titles = new String[5];
+    private ViewPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +69,56 @@ public class MainActivity extends AppCompatActivity{
                     return true;
                 }
                 return false;
+            }
+        });
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+                // inheritance case, apply for all fragments
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+                        BaseFragment baseFragment = (BaseFragment) adapter.getItem(position);
+                        baseFragment.verifySession("holaaaaa");
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+
+                // interface case
+                /*
+                switch (position){
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        ThreeFragment threeFragment = (ThreeFragment) adapter.getItem(position);
+                        threeFragment.updateSession();
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+                */
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
 
@@ -106,7 +157,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new SixFragment(), titles[0]);
         adapter.addFragment(new TwoFragment(), titles[1]);
         adapter.addFragment(new ThreeFragment(), titles[2]);
@@ -137,6 +188,11 @@ public class MainActivity extends AppCompatActivity{
         public void addFragment(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            return super.getItemPosition(object);
         }
 
         @Override
